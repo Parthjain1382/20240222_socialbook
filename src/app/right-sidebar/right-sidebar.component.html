@@ -1,0 +1,45 @@
+<div class="right-sidebar">
+    <div class="sidebar-title">
+      <h4>Events</h4>
+      <a href="#">See All</a>
+    </div>
+
+
+    @for (item of event_array; track item) {
+      <div class="event">
+        <div class="left-event">
+          <h3>{{item.day}}</h3>
+          <span>{{item.Month}}</span>
+        </div>
+        <div class="right-event">
+          <h4>{{item.event_name}}</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Willson Tech Park</p>
+          <a href="#">More Info</a>
+        </div>
+      </div>
+      }
+
+
+    <div class="sidebar-title">
+      <h4>Advertisement</h4>
+      <a href="#">close</a>
+    </div>
+    <img
+      src="https://i.postimg.cc/CLXYx9BL/advertisement.png"
+      class="siderbar-ads"
+    />
+    <div class="sidebar-title">
+      <h4>Conversation</h4>
+      <a href="#">Hide Chat</a>
+    </div>
+    <!--Loop to the profile and name of every chat person-->
+    @for (item of conversationArray; track item) {
+    <div class="online-list">
+      <div class="online">
+        <img src="{{item.profile_pic}}" />
+      </div>
+      <p>{{item.profile_name}}</p>
+    </div>
+    }
+
+</div>

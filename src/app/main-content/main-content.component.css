@@ -1,0 +1,175 @@
+.main-content {
+  width: 100%;
+}
+
+.load-more-btn {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #9a9a9a;
+  color: #626262;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.story-gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.story {
+  flex-basis: 18%;
+  padding-top: 32%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+.story img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  border: 5px solid #1876f2;
+}
+.story p {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+.story1 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url("https://w7.pngwing.com/pngs/813/128/png-transparent-amitabh-bachchan-the-great-gatsby-bollywood-actor-allahabad-amitabh-bachchan-celebrities-glass-necktie.png");
+}
+
+.story.story1 img {
+  top: unset;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  border: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.write-post-container {
+  width: 100%;
+  background: var(--bg-color);
+  border-radius: 6px;
+  padding: 20px;
+  color: #626262;
+}
+
+.post-input-container {
+  padding-left: 55px;
+  padding-top: 20px;
+}
+.post-input-container textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  resize: none;
+}
+
+.post-input-container {
+  padding-left: 0;
+}
+
+.add-post-links {
+  display: flex;
+  margin-top: 10px;
+}
+.add-post-links a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #626262;
+  margin-right: 30px;
+  font-size: 13px;
+}
+.add-post-links a img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+  .add-post-links {
+    flex-wrap: wrap;
+  }
+  .add-post-links a {
+    margin-right: 12px;
+    font-size: 9px;
+  }
+  .add-post-links a img {
+    width: 16px;
+    margin-right: 5px;
+  }
+}
+
+
+.post-container {
+  width: 100%;
+  background: var(--bg-color);
+  border-radius: 6px;
+  padding: 20px;
+  color: #626262;
+  margin: 20px 0;
+}
+.post-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-row a {
+  color: #9a9a9a;
+}
+
+.post-text {
+  color: #9a9a9a;
+  margin: 15px 0;
+  font-size: 15px;
+}
+.post-text span {
+  color: #626262;
+  font-weight: 500;
+}
+.post-text a {
+  color: #1876f2;
+  text-decoration: none;
+}
+.post-img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.activity-icons div img {
+  width: 18px;
+  margin-right: 10px;
+}
+.activity-icons div {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.post-porfile-icon {
+  display: flex;
+  align-items: center;
+}
+.post-porfile-icon img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}

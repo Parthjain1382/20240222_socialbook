@@ -1,0 +1,96 @@
+<div class="main-content">
+
+  <div class="story-gallery">
+    <div class="story story1">
+      <img src="https://i.postimg.cc/TPh453Zz/upload.png" />
+      <p>Post Story</p>
+    </div>
+
+    <div class="story" style="background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),url({{story2.url}})">
+      <img src={{story2.profile_url}} />
+      <p>{{story2.name}}</p>
+
+    </div>
+    <div class="story" style="background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),url({{story3.url}})">
+      <img src={{story3.profile_url}} />
+      <p>{{story3.name}}</p>
+
+    </div>
+    <div class="story" style="background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),url({{story4.url}})">
+      <img src={{story4.profile_url}} />
+      <p>{{story4.name}}</p>
+
+    </div>
+    <div class="story" style="background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),url({{story5.url}})">
+      <img src={{story5.profile_url}} />
+      <p>{{story5.name}}</p>
+    </div>
+  </div>
+
+
+  <div class="write-post-container">
+    <div class="user-profile">
+      <img src="{{ userprofilephoto }}" />
+      <div>
+        <p>{{ user.firstname + " " + user.lastname }}</p>
+        <small>Public <i class="fas fa-caret-down"></i></small>
+      </div>
+    </div>
+    <div class="post-input-container">
+      <textarea
+        rows="3"
+        placeholder="What's on your mind {{ user.firstname }}?"
+      ></textarea>
+      <div class="add-post-links">
+        <a href="#"
+          ><img src="https://i.postimg.cc/QMD2BDXs/live-video.png" />Live Video</a
+        >
+        <a href="#"
+          ><img src="https://i.postimg.cc/6pKKZn0D/photo.png" />Photo/Video</a
+        >
+        <a href="#"
+          ><img
+            src="https://i.postimg.cc/Pf6TBCdD/feeling.png"
+          />Feling/Activity</a
+        >
+      </div>
+    </div>
+  </div>
+  @for (item of post_content; track item) {
+
+    <div class="post-container">
+      <div class="post-row">
+        <div class="user-profile">
+
+          <img src="{{item.profile_img}}" />
+          <div>
+            <p>{{item.profile_name}}</p>
+            <span>{{item.date}}</span>
+          </div>
+        </div>
+        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+      </div>
+      <p class="post-text">
+        {{item.caption}}<a href="#">{{item.hastags}}</a>
+        <a href="#">{{item.hashtag}}</a>
+      </p>
+      <img src="{{item.post_image}}" class="post-img" />
+      <div class="post-row">
+        <div class="activity-icons">
+          <div>
+            <img src="https://i.postimg.cc/pLKNXrMq/like-blue.png" />{{item.like_count}}
+          </div>
+          <div><img src="https://i.postimg.cc/rmjMymWv/comments.png" />{{item.comment_count}}</div>
+          <div><img src="https://i.postimg.cc/T2bBchpG/share.png" />{{item.share_count}}</div>
+        </div>
+        <div class="post-porfile-icon">
+          <img src="https://i.postimg.cc/cHg22LhR/profile-pic.png" /><i class="fas fa-caret-down"></i>
+        </div>
+      </div>
+    </div>
+
+    }
+
+
+    <button type="button" class="load-more-btn">Load More</button>
+</div>
